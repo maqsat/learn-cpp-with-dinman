@@ -1,0 +1,184 @@
+//Bubble sort
+#include<iostream>
+using namespace std;
+
+void main()
+{
+	const int size = 10;
+	int A[size] = { 5, 9, 3, 4, 8, 6, 1, 7, 9, 23 };
+
+	int temp;
+
+	for (size_t i = 0; i < size; i++)
+	{
+		for (size_t j = 0; j < size - 1; j++)
+		{
+			if (A[i] < A[j])
+			{
+				temp = A[i];
+				A[i] = A[j];
+				A[j] = temp;
+			}
+		}
+	}
+
+	for (size_t i = 0; i < size; i++)
+	{
+		cout << A[i] << " ";
+	}
+
+	system("pause");
+}
+
+//Selection sort
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	const int n = 10;
+	int arr[n] = { 1,9,4,5,3,6,9,0,5,2 };
+
+	int start = 0, min, min_pos;
+
+	while (start != n-1)
+	{
+		min = arr[start];
+		min_pos = start;
+
+		for (int i = start + 1; i < n; i++)
+		{
+			if (arr[i] < min)
+			{
+				min = arr[i];
+				min_pos = i;
+			}
+		}
+
+		if (min_pos != start)
+		{
+			arr[min_pos] = arr[min_pos] + arr[start];
+			arr[start] = arr[min_pos] - arr[start];
+			arr[min_pos] = arr[min_pos] - arr[start];
+		}
+
+		start++;
+	}
+
+	for (size_t i = 0; i < n; i++)
+	{
+		cout << i << " ";
+	}
+
+	system("pause");
+
+}
+
+//Quick Sort
+#include<iostream>
+
+int arr[15] = { 2,9,4,8,5,3,0,5,3,9,7,0,4,6,2 };
+
+void quick_sort(int i, int j)
+{
+	int left = i;
+	int right = j;
+	int pivot = arr[(i + j) / 2];
+
+	do
+	{
+		while (arr[i] < pivot) i++;
+		while (arr[j] > pivot) --j;
+
+		if (i <= j)
+		{
+			std::swap(arr[i], arr[j]);
+			i++; --j;
+		}
+
+	} while (i<=j);
+
+	if (j > left) quick_sort(left, j);
+	if (i < right) quick_sort(i, right);
+}
+
+int main()
+{
+	quick_sort(0, 14);
+	for (size_t i = 0; i < 15; i++)
+	{
+		std::cout << arr[i] << " ";
+	}
+
+	system("pause");
+	return 0;
+}
+
+//Shell sort
+#include<iostream>
+
+void shell_sort(int arr[],int n)
+{
+	int middle = n/2;
+	int change;
+	int middle_copy;
+
+	do
+	{
+		do
+		{
+			change = 0;
+			for (size_t i = 0; i < n-middle; i++)
+			{
+				if (arr[i] > arr[i + middle])
+				{
+					std::swap(arr[i], arr[i + middle]);
+					change = 1;
+				}
+			}
+		} while (change);
+
+		middle_copy = middle;
+		middle /= 2;
+	} while (middle_copy != middle);
+
+}
+
+int main()
+{
+	int arr[20] = { 3,9,4,0,5,7,5,0,3,1,2,1,9,5,9,5,4,0,4,80 };
+	shell_sort(arr,20);
+	for (size_t i = 0; i < 20; i++)
+	{
+		std::cout << arr[i] << " ";
+	}
+
+	system("pause");
+	return 0;
+}
+
+//Сортировка массива при известном интервале значений элементов
+#include<iostream>
+
+int main()
+{
+	int arr[10] = { 4,1,5,3,5,5,9,6,5,4 };
+	int temp_arr[10] = { 0,0,0,0,0,0,0,0,0,0 };
+
+	for (size_t i = 0; i < 10; i++)
+	{
+		temp_arr[arr[i]] += 1;
+	}
+
+	for (size_t i = 1; i < 10; i++)
+	{
+		if (temp_arr[i] != 0) 
+			for (size_t j = 0; j < temp_arr[i]; j++)
+			{
+				std::cout << i << " ";
+			}
+	}
+
+	system("pause");
+	return 0;
+}

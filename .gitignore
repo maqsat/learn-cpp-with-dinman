@@ -25,4 +25,5 @@
 # Executables
 *.exe
 *.out
-*.app
+a.app
+output

@@ -1,5 +1,6 @@
-Примеры структыры выбора
-1-пример
+/** Примеры структыры выбора **/
+
+
 //if
 #include<iostream>
 using namespace std;
@@ -10,10 +11,10 @@ int main()
 	if (n > 2 && n < 6) cout << "Spring"; else
 		if (n>5 && n < 9) cout << "Summer"; else
 			if (n>8 && n < 12) cout << "Autumn"; else cout << "Winter";
-	system("pause");
+	//system("pause");
 }
 
-2-пример
+
 //switch
 #include<iostream>
 #include<conio.h>
@@ -29,10 +30,10 @@ int main()
 	case 5 + 10: cout << "YES"; break;
 	default: cout << "NO";
 	}
-	system("pause");
+	//system("pause");
 }
 
-3-пример
+
 //max is a,b,s
 #include<iostream>
 #include<conio.h>
@@ -45,11 +46,11 @@ int main()
 	if (b > c) { if (max < b)  max = b; }
 	else if (max < c)  max = c;
 	cout << max;
-	system("pause");
+	//system("pause");
 }
 
-4-пример
-//kalkulator
+
+//culculator
 #include<iostream>
 #include<conio.h>
 using namespace std;
@@ -66,11 +67,11 @@ int main()
 	default: cout << "undefined char";
 	}
 	
-	system("pause");
+	//system("pause");
 }
 
-5-пример
-//naiti max summu 
+
+//spot max
 #include<iostream>
 #include<conio.h>
 using namespace std;
@@ -81,11 +82,14 @@ int main()
 	if ((a + c) > (a + b) && (a + c) > (b + c)) cout << "a + c"; else
 		if ((a + b) > (b + c)) cout << "a + b"; else cout << "b + c";
 	
-	system("pause");
+	//system("pause");
 }
 
-Примеры структуры повторения
-1-пример
+
+/** Примеры структуры повторения **/
+
+
+//multiplication table
 #include <iostream.h>
 #include <conio.h>
 main()
@@ -97,11 +101,11 @@ main()
 		cout<<(i*j)<<" ";
 		cout<<endl;
 	}
-	system("pause");
+	//system("pause");
 }
 
-2-пример
-//faktorial
+
+//factorial
 #include<iostream>
 using namespace std;
 
@@ -115,11 +119,11 @@ int main()
 	}
 
 	cout << sum;
-	system("pause");
+	//system("pause");
 }
 
-3-пример
-//opr proatyk chisel
+
+//spot primes
 #include<iostream>
 #include<conio.h>
 using namespace std;
@@ -139,10 +143,10 @@ int main()
 		if (flag) cout << i << endl;
 	}
 
-	system("pause");
+	//system("pause");
 }
 
-4-пример
+//find number is most contain units
 #include<iostream>
 using namespace std;
 float one(int number)
@@ -165,9 +169,10 @@ float main()
 	int countC = one(c);
 	if (countA > countB && countA > countC) cout << a; else
 		if (countB > countC) cout << b; else cout << c;
-	system("pause");
+	//system("pause");
 }
-5-пример
+
+//is polindrome
 #include<iostream>
 using namespace std;
 float main()
@@ -182,9 +187,10 @@ float main()
 		copyA/=10;
 	}
 	if (a == b) cout << "YES"; else cout << "NO";
-	system("pause");
+	//system("pause");
 }
-6-пример
+
+//count units and zeros number in binary number
 #include<iostream>
 using namespace std;
 float main()
@@ -198,5 +204,5 @@ float main()
 	}
 	cout << 0 << "=>" << count0 << endl;
 	cout << 1 << "=>" << count1 << endl;
-	system("pause");
+	//system("pause");
 }

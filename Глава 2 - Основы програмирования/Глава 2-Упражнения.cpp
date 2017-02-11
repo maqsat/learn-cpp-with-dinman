@@ -1,4 +1,4 @@
-1-упражнения
+//1-exercise
 #include<iostream>
 using namespace std;
 float main()
@@ -27,9 +27,10 @@ float main()
 	}
 
 
-	system("pause");
+	//system("pause");
 }
-2-упражнения
+
+//2-exercise
 #include<iostream>
 using namespace std;
 float main()
@@ -46,9 +47,10 @@ float main()
 	}
 
 	cout << nod;
-	system("pause");
+	//system("pause");
 }
-3-упражнения
+
+//3-exercise
 #include<iostream>
 #include<string>
 using namespace std;
@@ -98,10 +100,11 @@ int main()
 	else if (n == 0) cout<<zero_to_nine[0] << endl;
 	else cout << "Overly large dates ..." << endl;
 
-	system("pause");
+	//system("pause");
 	return 0;
 }
-4-упражнения
+
+//4-exercise
 #include<iostream>
 using namespace std;
 
@@ -125,9 +128,10 @@ void main()
 		else cout << "Попровуйте еще раз"<<endl;
 	}
 
-	system("pause");
+	//system("pause");
 }
-5-упражнения
+
+//5-exercise
 #include<iostream>
 using namespace std;
 
@@ -154,9 +158,10 @@ void main()
 
 	cout << temp << endl;
 
-	system("pause");
+	//system("pause");
 }
-6-упражнения
+
+//6-exercise
 #include<iostream>
 void main()
 {
@@ -169,7 +174,7 @@ void main()
 	}
 	std::cout << sum / k;
 }
-7-упражнения
+7-exercise
 #include<iostream>
 using namespace std;
 
@@ -209,9 +214,10 @@ void main()
 	}
 
 	if (flag) cout << "Not foud" << endl;
-	system("pause");
+	//system("pause");
 }
-8-упражнения
+
+//8-exercise
 #include<iostream>
 using namespace std;
 void main()
@@ -224,7 +230,8 @@ void main()
 	if (k==3) cout<<"It's triangle";
 	else cout << "It's don't triangle";
 }
-9-упражнения
+
+//9-exercise
 #include<iostream>
 using namespace std;
 
@@ -245,9 +252,10 @@ void main()
 		}
 	}
 	
-	system("pause");
+	//system("pause");
 }
-10-упражнения
+
+//10-exercise
 #include<iostream>
 using namespace std;
 
@@ -277,5 +285,5 @@ void main()
 
 	}
 	
-	system("pause");
+	//system("pause");
 }

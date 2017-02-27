@@ -54,3 +54,42 @@ int main()
 }
 
 //2
+#include "iostream"
+
+int a[10] = {49,3,56,23,54,56,76,888,43,3};
+
+void quicksort(int left, int right)
+{
+	int i = left, j = right;
+	int pivot = a[(left + right) / 2]%10;
+
+	do
+	{
+		while(a[i]%10 < pivot) i++;
+		while(a[j]%10 > pivot) j--;
+		//while(a[i]%10 > pivot) i++;
+		//while(a[j]%10 < pivot) j--;
+
+		if(i<j)
+		{
+			a[i] = a[i] + a[j];
+			a[j] = a[i] - a[j];
+			a[i] = a[i] - a[j];
+		}
+		i++;--j;
+
+	} while (i<=j);
+
+	if(right>i) quicksort(i,right);
+	if(left<j) quicksort(left,j);
+}
+
+int main()
+{
+	quicksort(0,9);
+	for (int i = 0; i < 10; ++i)
+	{
+		std::cout<<a[i]<<" ";
+	}
+	return 0;
+}

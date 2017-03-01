@@ -25,5 +25,5 @@
 # Executables
 *.exe
 *.out
-a.app
+a.cpp
 output

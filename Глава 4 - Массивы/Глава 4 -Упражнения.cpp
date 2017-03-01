@@ -53,7 +53,7 @@ int main()
 	return 0;
 }
 
-//2
+//6
 #include "iostream"
 
 int a[10] = {49,3,56,23,54,56,76,888,43,3};
